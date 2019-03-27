@@ -1,6 +1,9 @@
 <html>
 <head>
 <title>我是标题</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <script src="http://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
@@ -27,6 +30,12 @@ function test(){
     	}
 	});
 }
+
+$(function(){
+	$("#myButton1.btn").click(function(){
+		test();
+	});
+});
 </script>
 
 <body>
@@ -36,5 +45,8 @@ function test(){
 	<h1>加多段</h1>
 	<a href="javascript:openNewWin("https://freeman5860.github.io/wvtest/test2.html", "testopen")">在新窗口打开</a>
 	<a class="btn" onclick="test()">测试按钮</a>
+	<div id="myButton1" class="container">
+		<button type="button" class="btn" >基本按钮</button>
+	</div>
 </body>
 </html>
