@@ -3,10 +3,29 @@
 <title>我是标题</title>
 </head>
 
+<script src="http://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+
 <script type="text/javascript">
 function openNewWin(url, title)
 {
 	window.open(url, title, "location=no,status=no,scrollvars=no");
+}
+
+function test(){
+	mqq.ui.setTitleButtons({
+    		left : {
+        	title : "返回",
+        	callback : function () {
+            		alert("点击左按钮")
+        	}
+    	},
+    	right : {
+        	title : "我的...",
+        	callback : function () {
+            		alert("点击右按钮")
+        	}
+    	}
+	});
 }
 </script>
 
@@ -16,5 +35,6 @@ function openNewWin(url, title)
 	<a href="https://freeman5860.github.io/wvtest/test2.html">点我</a>
 	<h1>加多段</h1>
 	<a href="javascript:openNewWin("https://freeman5860.github.io/wvtest/test2.html", "testopen")">在新窗口打开</a>
+	<a class="btn" onclick="test()">测试按钮</a>
 </body>
 </html>
