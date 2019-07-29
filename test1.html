@@ -35,6 +35,12 @@ function shareMsg(){
     mqq.ui.shareMessage
 }
 
+$(document).ready(function(){
+  $("#button1").click(function(){
+                      mqq.invoke('UrlSaveVerifyV2', 'continueVisit', {})
+                     });
+  });
+
 test();
 </script>
 
@@ -46,7 +52,7 @@ test();
 	<a href="javascript:openNewWin("mqqapi://forward/url?url_prefix=aHR0cHM6Ly9zdXBlcmNvcmUucXEuY29tL2dhbWVfaW5idWlsdF90b3VjaC9xcS5odG1sP3FxPTgwMDAzNTU3Mg==&version=1&src_type=web", "testopen")">在新窗口打开</a>
 	
 	<div id="myButton1" class="container">
-		<button type="button" class="btn btn-default" >基本按钮</button>
+		<button id="button1" type="button" class="btn btn-default" >基本按钮</button>
 	</div>
 </body>
 </html>
