@@ -37,10 +37,14 @@ function shareMsg(){
 
 $(document).ready(function(){
   $("#button1").click(function(){
-                      mqq.invoke('UrlSaveVerifyV2', 'continueVisit', {
-                                 url:'https://freeman5860.github.io/wvtest/test2.html'
-                                 });
-                     });
+                      window.mqq.ui.setPullDown({
+                      enable:true
+                                                });
+                      window.mqq.addEventListener('qbrowserPullDown', ()=>{
+                                                  window.mqq.ui.setPullDown({
+                                                                            success: true,
+                                                                            text:'刷新成功'
+                                                                            });
   });
 
 test();
