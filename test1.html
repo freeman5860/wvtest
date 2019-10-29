@@ -47,8 +47,7 @@ $(document).ready(function(){
                                                                             });
                                                   });
                       });
-  });
-
+                  
   $("#button3").click(function(){
       mqq.invoke('connect', 'exchangeID', {
           "appid":123456,
@@ -56,8 +55,10 @@ $(document).ready(function(){
           "callback":function(){
               alert(arguments);
           }
-      }
+      });
   });
+                  
+});
 
 test();
 </script>
