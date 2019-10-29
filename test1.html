@@ -49,6 +49,16 @@ $(document).ready(function(){
                       });
   });
 
+  $("#button3").click(function(){
+      mqq.invoke('connect', 'exchangeID', {
+          "appid":123456,
+          "openid":9876543,
+          "callback":function(){
+              alert(arguments);
+          }
+      }
+  });
+
 test();
 </script>
 
@@ -66,5 +76,9 @@ test();
     <div id="myButton2" class="container">
         <button id="button2" type="button" class="btn btn-default" >按钮2</button>
     </div>
+
+	<div id="myButton3" class="container">
+		<button id="button3" type="button" class="btn btn-default" >按钮3</button>
+	</div>
 </body>
 </html>
