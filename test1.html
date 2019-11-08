@@ -59,7 +59,9 @@ $(document).ready(function(){
   });
                   
                   $("#button2").click(function(){
-                                      alert(mqq.QQVersion);
+                                      mqq.sensor.getLocation({allowCacheTime:60}, function(retCode, latitude, longitude){
+                                          alert("retCode: " + retCode + " " + latitude + ", " + longitude);
+                                      });
                   });
                   
 });
