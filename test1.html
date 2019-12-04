@@ -63,6 +63,17 @@ $(document).ready(function(){
                                           alert("retCode: " + retCode + " " + latitude + ", " + longitude);
                                       });
                   });
+
+	$("#button4").click(function(){
+		mqq.media.getPicture({
+			source:0,
+			front:false,
+			max:2,
+
+		}, function (ret, images) {
+			alert('ret:' + ret + ' images:' + images);
+		})
+	});
                   
 });
 
@@ -86,6 +97,10 @@ test();
 
 	<div id="myButton3" class="container">
 		<button id="button3" type="button" class="btn btn-default" >按钮3</button>
+	</div>
+
+	<div id="myButton4" class="container">
+		<button id="button4" type="button" class="btn btn-default" >Media.getPicture</button>
 	</div>
 </body>
 </html>
