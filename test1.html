@@ -73,6 +73,17 @@ $(document).ready(function(){
 			alert('ret:' + ret + ' images:' + images);
 		});
 	});
+
+	$("#button5").click(function(){
+		mqq.invoke('QZImagePicker', 'choosePhoto', {
+			pickerType:0,
+			compressType: 1,
+			maxPickCount:1,
+			clipFlag:1,
+			clipByH5:1,
+			noNeedImageData:1
+		});
+	});
                   
 });
 
@@ -100,6 +111,10 @@ test();
 
 	<div id="myButton4" class="container">
 		<button id="button4" type="button" class="btn btn-default" >Media.getPicture</button>
+	</div>
+
+	<div id="myButton5" class="container">
+		<button id="button5" type="button" class="btn btn-default" >QZImagePicker.choosePhoto</button>
 	</div>
 </body>
 </html>
