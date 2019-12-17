@@ -84,6 +84,15 @@ $(document).ready(function(){
 			noNeedImageData:1
 		});
 	});
+
+	$("#button6").click(function(){
+		mqq.invoke('data', 'updateLoginInfo', {
+			key:'pskey',
+			callback:function () {
+				alert(arguments);
+			}
+		});
+	});
                   
 });
 
@@ -115,6 +124,10 @@ test();
 
 	<div id="myButton5" class="container">
 		<button id="button5" type="button" class="btn btn-default" >QZImagePicker.choosePhoto</button>
+	</div>
+
+	<div id="myButton6" class="container">
+		<button id="button6" type="button" class="btn btn-default" >updateLoginInfo</button>
 	</div>
 </body>
 </html>
