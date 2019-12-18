@@ -96,9 +96,24 @@ $(document).ready(function(){
 
 	$("#button7").click(function(){
 		mqq.invoke('ui', 'shareArkMessage', {
-			appName:'com.tencent.gxhServiceIntelligentTip',
+			appName: 'com.tencent.gxhServiceIntelligentTip',
 			appView: 'gxhServiceIntelligentTip',
-			promptText: '服务号',
+			promptText: '服务号机制化消息',
+			metaData: JSON.stringify({
+				gxhServiceIntelligentTip: {
+					appid: 'gxhServiceIntelligentTip',
+					bgImg: pic,
+					action: this.shareMsg.share_url + (this.shareMsg.share_url.indexOf('?') > -1 ? '&mentor=' : '?mentor=') + this.teacherUin + '&name=' + encodeURIComponent(this.teacherNick) + '&from=student'
+				}
+			}),
+			appConfig: JSON.stringify({
+				forward: 1,
+				autosize: 1,
+				type: 'card',
+				round: 0,
+				showSender: 0
+			}),
+			appMinVersion: '0.0.0.23',
 			callback:function () {
 				alert(arguments);
 			}
