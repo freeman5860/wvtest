@@ -93,6 +93,17 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#button7").click(function(){
+		mqq.invoke('ui', 'shareArkMessage', {
+			appName:'com.tencent.gxhServiceIntelligentTip',
+			appView: 'gxhServiceIntelligentTip',
+			promptText: '服务号',
+			callback:function () {
+				alert(arguments);
+			}
+		});
+	});
                   
 });
 
@@ -128,6 +139,10 @@ test();
 
 	<div id="myButton6" class="container">
 		<button id="button6" type="button" class="btn btn-default" >updateLoginInfo</button>
+	</div>
+
+	<div id="myButton7" class="container">
+		<button id="button7" type="button" class="btn btn-default" >shareArkMessage</button>
 	</div>
 </body>
 </html>
