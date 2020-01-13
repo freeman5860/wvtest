@@ -118,6 +118,12 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#button8").click(function(){
+		mqq.device.getDeviceInfo(function(data){
+			console.log(data);
+		});
+	});
                   
 });
 
@@ -157,6 +163,10 @@ $(document).ready(function(){
 
 	<div id="myButton7" class="container">
 		<button id="button7" type="button" class="btn btn-default" >shareArkMessage</button>
+	</div>
+
+    <div id="myButton8", class="container">
+		<button id="button8" type="button" class="btn btn-default">getDeviceInfo</button>
 	</div>
 </body>
 </html>
