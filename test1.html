@@ -150,7 +150,8 @@ $(document).ready(function(){
 		src_action: "plugin",
 		src_actionData: "mqqapi://readinjoy/open?src_type=internal&version=1&target=1",
 		src_iconUrl: "http://sqimg.qq.com/qq_product_operations/kan/images/viola/shortPGC/kd_icon_v4.png",
-		title: "哈哈哈哈"
+		title: "哈哈哈哈",
+			keepShareUrl:true
 		};
 		mqq.ui.shareMessage(friendShareData, (shareResult) => {
 			console.log('shareResult', shareResult);
