@@ -157,6 +157,15 @@ $(document).ready(function(){
 			console.log('shareResult', shareResult);
 		});
 	})
+
+	$("#button11").click(function(){
+		mqq.invoke('qq', 'authorize', {
+			scope: 'scope.userLocation',
+			success() {
+				console.log('成功')
+			},
+		});
+	});
                   
 });
 
@@ -208,6 +217,10 @@ $(document).ready(function(){
 
 	<div id="myButton10", class="container">
 		<button id="button10" type="button" class="btn btn-default">shareMessage接口2</button>
+	</div>
+
+	<div id="myButton11", class="container">
+		<button id="button11" type="button" class="btn btn-default">qq.authorize接口</button>
 	</div>
 </body>
 </html>
