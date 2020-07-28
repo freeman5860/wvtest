@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>我是一条超级无敌比万里长城还要长super高级非常厉害又出乎意料的标题</title>
+<title>QQ提醒测试页</title>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -9,60 +9,23 @@
 <script src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
 
 <script type="text/javascript">
-function openNewWin(url, title)
-{
-	window.open(url, title, "location=no,status=no,scrollvars=no");
-}
-
-function test(){
-	mqq.ui.setTitleButtons({
-    		left : {
-        	title : "返回",
-        	callback : function () {
-            		alert("点击左按钮")
-        	}
-    	},
-    	right : {
-        	title : "我的...",
-        	callback : function () {
-            		alert("点击右按钮")
-        	}
-    	}
-	});
-}
-
-function shareMsg(){
-    mqq.ui.shareMessage
-}
 
 $(document).ready(function(){
   $("#button1").click(function(){
-                      window.mqq.ui.setPullDown({
-                      enable:true
-                                                });
-                      window.mqq.addEventListener('qbrowserPullDown', ()=>{
-                                                  window.mqq.ui.setPullDown({
-                                                                            success: true,
-                                                                            text:'刷新成功'
-                                                                            });
-                                                  });
-                      });
-                  
-  $("#button3").click(function(){
-      mqq.invoke('connect', 'exchangeID', {
-          "appid":123456,
-          "openid":9876543,
-          "callback":function(){
-              alert(arguments);
-          }
-      });
+	  mqq.invoke('connect', 'exchangeID', {
+		  "appid":123456,
+		  "openid":9876543,
+		  "callback":function(){
+			  alert(arguments);
+		  }
+	  });
   });
                   
-                  $("#button2").click(function(){
-                                      mqq.sensor.getLocation({allowCacheTime:60}, function(retCode, latitude, longitude){
-                                          alert("retCode: " + retCode + " " + latitude + ", " + longitude);
-                                      });
-                  });
+  $("#button2").click(function(){
+                      mqq.sensor.getLocation({allowCacheTime:60}, function(retCode, latitude, longitude){
+                          alert("retCode: " + retCode + " " + latitude + ", " + longitude);
+                      });
+  });
 
 	$("#button4").click(function(){
 		mqq.media.getPicture({
@@ -164,35 +127,8 @@ $(document).ready(function(){
 </script>
 
 <body>
-	<h1>又是标题？</h1>
-	<p>这是段落</p>
-	<a href="https://freeman5860.github.io/wvtest/test2.html">点我</a>
-	<h1>加多段</h1>
-	<a href="javascript:openNewWin("mqqapi://forward/url?url_prefix=aHR0cHM6Ly9zdXBlcmNvcmUucXEuY29tL2dhbWVfaW5idWlsdF90b3VjaC9xcS5odG1sP3FxPTgwMDAzNTU3Mg==&version=1&src_type=web", "testopen")">在新窗口打开</a>
-	
-	<div id="myButton1" class="container">
-		<button id="button1" type="button" class="btn btn-default" >基本按钮</button>
-	</div>
-    
-    <div id="myButton2" class="container">
-        <button id="button2" type="button" class="btn btn-default" >按钮2</button>
-    </div>
-
-	<div id="myButton3" class="container">
-		<button id="button3" type="button" class="btn btn-default" >按钮3</button>
-	</div>
-
-	<div id="myButton4" class="container">
-		<button id="button4" type="button" class="btn btn-default" >Media.getPicture</button>
-	</div>
-
-	<div id="myButton5" class="container">
-		<button id="button5" type="button" class="btn btn-default" >QZImagePicker.choosePhoto</button>
-	</div>
-
-	<div id="myButton6" class="container">
-		<button id="button6" type="button" class="btn btn-default" >updateLoginInfo</button>
-	</div>
+	<h1>QQ提醒测试页</h1>
+	<p>测试页</p>
 
 	<div id="myButton7" class="container">
 		<button id="button7" type="button" class="btn btn-default" >shareArkMessage</button>
@@ -208,6 +144,10 @@ $(document).ready(function(){
 
 	<div id="myButton10", class="container">
 		<button id="button10" type="button" class="btn btn-default">shareMessage接口2</button>
+
+	<div id="myButton1" class="container">
+		<button id="button1" type="button" class="btn btn-default" >我要订阅</button>
+
 	</div>
 </body>
 </html>
