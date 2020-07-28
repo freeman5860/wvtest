@@ -160,8 +160,8 @@ $(document).ready(function(){
 
 	$("#button11").click(function(){
 		mqq.invoke('device', 'getConfiguration', {
-			callback:function (ret, config) {
-				alert("ret:" + ret + " config:" + config);
+			"callback":function(){
+				alert(arguments);
 			}
 		});
 	});
@@ -219,7 +219,7 @@ $(document).ready(function(){
 	</div>
 
 	<div id="myButton11", class="container">
-		<button id="button11" type="button" class="btn btn-default">getConfiguration3</button>
+		<button id="button11" type="button" class="btn btn-default">getConfiguration4</button>
 	</div>
 </body>
 </html>
