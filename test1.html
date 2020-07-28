@@ -157,6 +157,13 @@ $(document).ready(function(){
 			console.log('shareResult', shareResult);
 		});
 	})
+
+	$("#button11").click(function(){
+		mqq.device.getConfiguration(
+				function(data){
+					alert(arguments);
+				});
+	});
                   
 });
 
@@ -208,6 +215,10 @@ $(document).ready(function(){
 
 	<div id="myButton10", class="container">
 		<button id="button10" type="button" class="btn btn-default">shareMessage接口2</button>
+	</div>
+
+	<div id="myButton11", class="container">
+		<button id="button11" type="button" class="btn btn-default">getConfiguration</button>
 	</div>
 </body>
 </html>
