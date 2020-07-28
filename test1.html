@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>我是一条超级无敌比万里长城还要长super高级非常厉害又出乎意料的标题</title>
+<title>QQ提醒测试页</title>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -9,163 +9,17 @@
 <script src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
 
 <script type="text/javascript">
-function openNewWin(url, title)
-{
-	window.open(url, title, "location=no,status=no,scrollvars=no");
-}
-
-function test(){
-	mqq.ui.setTitleButtons({
-    		left : {
-        	title : "返回",
-        	callback : function () {
-            		alert("点击左按钮")
-        	}
-    	},
-    	right : {
-        	title : "我的...",
-        	callback : function () {
-            		alert("点击右按钮")
-        	}
-    	}
-	});
-}
-
-function shareMsg(){
-    mqq.ui.shareMessage
-}
 
 $(document).ready(function(){
   $("#button1").click(function(){
-                      window.mqq.ui.setPullDown({
-                      enable:true
-                                                });
-                      window.mqq.addEventListener('qbrowserPullDown', ()=>{
-                                                  window.mqq.ui.setPullDown({
-                                                                            success: true,
-                                                                            text:'刷新成功'
-                                                                            });
-                                                  });
-                      });
-                  
-  $("#button3").click(function(){
-      mqq.invoke('connect', 'exchangeID', {
-          "appid":123456,
-          "openid":9876543,
-          "callback":function(){
-              alert(arguments);
-          }
-      });
+	  mqq.invoke('connect', 'exchangeID', {
+		  "appid":123456,
+		  "openid":9876543,
+		  "callback":function(){
+			  alert(arguments);
+		  }
+	  });
   });
-                  
-                  $("#button2").click(function(){
-                                      mqq.sensor.getLocation({allowCacheTime:60}, function(retCode, latitude, longitude){
-                                          alert("retCode: " + retCode + " " + latitude + ", " + longitude);
-                                      });
-                  });
-
-	$("#button4").click(function(){
-		mqq.media.getPicture({
-			source:0,
-			front:false,
-			max:2
-		}, function (ret, images) {
-			alert('ret:' + ret + ' images:' + images);
-		});
-	});
-
-	$("#button5").click(function(){
-		mqq.invoke('QZImagePicker', 'choosePhoto', {
-			pickerType:0,
-			compressType: 1,
-			maxPickCount:1,
-			clipFlag:1,
-			clipByH5:1,
-			noNeedImageData:1
-		});
-	});
-
-	$("#button6").click(function(){
-		mqq.invoke('data', 'updateLoginInfo', {
-			key:'pskey',
-			callback:function () {
-				alert(arguments);
-			}
-		});
-	});
-
-	$("#button7").click(function(){
-		mqq.invoke('ui', 'shareArkMessage', {
-			appName: 'com.tencent.gxhServiceIntelligentTip',
-			appView: 'gxhServiceIntelligentTip',
-			promptText: '服务号机制化消息',
-			metaData: JSON.stringify({
-				gxhServiceIntelligentTip: {
-					appid: 'gxhServiceIntelligentTip',
-					bgImg: 'pic'
-				}
-			}),
-			appConfig: JSON.stringify({
-				forward: 1,
-				autosize: 1,
-				type: 'card',
-				round: 0,
-				showSender: 0
-			}),
-			appMinVersion: '0.0.0.23',
-			callback:function () {
-				alert(arguments);
-			}
-		});
-	});
-
-	$("#button8").click(function(){
-		mqq.device.getDeviceInfo(function(data){
-			console.log(data);
-		});
-	});
-
-	$("#button9").click(function(){
-		mqq.data.updateLoginInfo({
-			key:pskey
-				},
-		function(data){
-			console.log(data);
-		});
-	});
-
-	$("#button10").click(function () {
-		const friendShareData = {
-			WXShareFromQQKandian: 1,
-		    back: true,
-		desc: "点击更多精彩内容^▽^",
-		imageUrl: "http://qqpublic.qpic.cn/qq_public_cover/0/0-1587891561-84ED47BD1A2758BEC2C4723BF98A579C_open_750_415/0?fmt=jpg&size=53&h=720&w=1080&ppv=1",
-		image_url: "http://qqpublic.qpic.cn/qq_public_cover/0/0-1587891561-84ED47BD1A2758BEC2C4723BF98A579C_open_750_415/0?fmt=jpg&size=53&h=720&w=1080&ppv=1",
-		needPopBack: true,
-		puin: "0",
-		share_type: 0,
-		share_url: "http://viola.qq.com/js/commentDetail.js?_rij_violaUrl=1&v_tid=6&v_bid=3740&v_bundleName=commentDetail&hideNav=1&v_nav_immer=1&feedId=15723758683248860445&entry=0",
-		sourceName: "腾讯看点",
-		srcName: "腾讯看点",
-		src_action: "plugin",
-		src_actionData: "mqqapi://readinjoy/open?src_type=internal&version=1&target=1",
-		src_iconUrl: "http://sqimg.qq.com/qq_product_operations/kan/images/viola/shortPGC/kd_icon_v4.png",
-		title: "哈哈哈哈",
-			keepShareUrl:true
-		};
-		mqq.ui.shareMessage(friendShareData, (shareResult) => {
-			console.log('shareResult', shareResult);
-		});
-	})
-
-	$("#button11").click(function(){
-		mqq.invoke('qq', 'authorize', {
-			scope: 'scope.userLocation',
-			success() {
-				console.log('成功')
-			},
-		});
-	});
                   
 });
 
@@ -173,54 +27,11 @@ $(document).ready(function(){
 </script>
 
 <body>
-	<h1>又是标题？</h1>
-	<p>这是段落</p>
-	<a href="https://freeman5860.github.io/wvtest/test2.html">点我</a>
-	<h1>加多段</h1>
-	<a href="javascript:openNewWin("mqqapi://forward/url?url_prefix=aHR0cHM6Ly9zdXBlcmNvcmUucXEuY29tL2dhbWVfaW5idWlsdF90b3VjaC9xcS5odG1sP3FxPTgwMDAzNTU3Mg==&version=1&src_type=web", "testopen")">在新窗口打开</a>
-	
+	<h1>QQ提醒测试页</h1>
+	<p>测试页</p>
+
 	<div id="myButton1" class="container">
-		<button id="button1" type="button" class="btn btn-default" >基本按钮</button>
-	</div>
-    
-    <div id="myButton2" class="container">
-        <button id="button2" type="button" class="btn btn-default" >按钮2</button>
-    </div>
-
-	<div id="myButton3" class="container">
-		<button id="button3" type="button" class="btn btn-default" >按钮3</button>
-	</div>
-
-	<div id="myButton4" class="container">
-		<button id="button4" type="button" class="btn btn-default" >Media.getPicture</button>
-	</div>
-
-	<div id="myButton5" class="container">
-		<button id="button5" type="button" class="btn btn-default" >QZImagePicker.choosePhoto</button>
-	</div>
-
-	<div id="myButton6" class="container">
-		<button id="button6" type="button" class="btn btn-default" >updateLoginInfo</button>
-	</div>
-
-	<div id="myButton7" class="container">
-		<button id="button7" type="button" class="btn btn-default" >shareArkMessage</button>
-	</div>
-
-    <div id="myButton8", class="container">
-		<button id="button8" type="button" class="btn btn-default">getDeviceInfo</button>
-	</div>
-
-	<div id="myButton9", class="container">
-		<button id="button9" type="button" class="btn btn-default">updateLoginInfo</button>
-	</div>
-
-	<div id="myButton10", class="container">
-		<button id="button10" type="button" class="btn btn-default">shareMessage接口2</button>
-	</div>
-
-	<div id="myButton11", class="container">
-		<button id="button11" type="button" class="btn btn-default">qq.authorize接口</button>
+		<button id="button1" type="button" class="btn btn-default" >我要订阅</button>
 	</div>
 </body>
 </html>
