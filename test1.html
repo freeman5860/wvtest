@@ -160,8 +160,8 @@ $(document).ready(function(){
 
 	$("#button11").click(function(){
 		mqq.invoke('device', 'getConfiguration', {
-			callback:function () {
-				alert(arguments);
+			callback:function (ret, config) {
+				alert("ret:" + ret + " config:" + config);
 			}
 		});
 	});
