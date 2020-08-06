@@ -160,8 +160,17 @@ $(document).ready(function(){
 
 	$("#button11").click(function(){
 		mqq.invoke('device', 'getConfiguration', {
-			"callback":function(){
-				alert(arguments);
+			"callback":function(config){
+				alert(config);
+			}
+		});
+	});
+
+	$("#button12").click(function(){
+		mqq.invoke('data', 'isFollowUin', {
+			"uin": "2010741172",
+			"callback":function(config){
+				alert(config);
 			}
 		});
 	});
@@ -220,6 +229,10 @@ $(document).ready(function(){
 
 	<div id="myButton11", class="container">
 		<button id="button11" type="button" class="btn btn-default">getConfiguration4</button>
+	</div>
+
+	<div id="myButton12", class="container">
+		<button id="button12" type="button" class="btn btn-default">isFollowUin</button>
 	</div>
 </body>
 </html>
