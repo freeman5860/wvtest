@@ -174,6 +174,21 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#button13").click(function () {
+		mqq.app.downloadApp({
+			"appid": "100686922",
+			"url": "http://view.inews.qq.com/appDownLoad/322?refer=biznew&src=mQQ&ostype=android&uin=",
+			"packageName": "com.tencent.news",
+			"actionCode": "2",
+			"via": "ANDROIDQQ.TXNEWS",
+			//统一下载管控
+			"source": "qzone",
+			"appName": "TencentNews",
+		}, function(data){
+			alert(JSON.stringify(data))
+		});
+	});
                   
 });
 
@@ -233,6 +248,10 @@ $(document).ready(function(){
 
 	<div id="myButton12", class="container">
 		<button id="button12" type="button" class="btn btn-default">isFollowUin</button>
+	</div>
+
+	<div id="myButton13", class="container">
+		<button id="button13" type="button" class="btn btn-default">DownloadApp</button>
 	</div>
 </body>
 </html>
