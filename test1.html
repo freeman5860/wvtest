@@ -189,6 +189,12 @@ $(document).ready(function(){
 			alert(JSON.stringify(data))
 		});
 	});
+
+	$("#button14").click(function () {
+        mqq.invoke('ui', 'invokeClientAction', {
+            action: 1
+        })
+    });
                   
 });
 
@@ -253,5 +259,9 @@ $(document).ready(function(){
 	<div id="myButton13", class="container">
 		<button id="button13" type="button" class="btn btn-default">DownloadApp</button>
 	</div>
+
+    <div id="myButton14" class="container">
+        <button id="button14" type="button" class="btn btn-default"></button>
+    </div>
 </body>
 </html>
