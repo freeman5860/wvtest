@@ -184,6 +184,7 @@ $(document).ready(function(){
 			"via": "ANDROIDQQ.TXNEWS",
 			//统一下载管控
 			"source": "qzone",
+			"isUniteDownload": true,
 			"appName": "TencentNews",
 		}, function(data){
 			alert(JSON.stringify(data))
@@ -192,7 +193,7 @@ $(document).ready(function(){
 
 	$("#button14").click(function () {
         mqq.invoke('ui', 'invokeClientAction', {
-            action: 1
+            action: 2
         })
     });
                   
