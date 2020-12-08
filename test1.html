@@ -208,6 +208,18 @@ $(document).ready(function(){
 				function (data) {
 				})
 	});
+
+	$("#button16").click(function () {
+		mqq.data.ssoRequest({
+			cmd: 'video_token',
+			data: {
+				vid: vid,
+				guid: guid
+			}
+		}, function(responseText){
+			alert(responseText);
+		});
+	});
                   
 });
 
@@ -279,6 +291,10 @@ $(document).ready(function(){
 
 	<div id="myButton15" class="container">
 		<button id="button15" type="button" class="btn btn-default">sharePicture</button>
+	</div>
+
+	<div id="myButton16" class="container">
+		<button id="button16" type="button" class="btn btn-default">data.ssoRequest</button>
 	</div>
 </body>
 </html>
