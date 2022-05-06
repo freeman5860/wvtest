@@ -220,6 +220,12 @@ $(document).ready(function(){
 			alert(responseText);
 		});
 	});
+    
+    $("#button17").click(function () {
+        mqq.app.checkAppInstalled(id, function (ret) {
+            console.log(ret); // 5.3.1
+        });
+    });
                   
 });
 
@@ -300,5 +306,9 @@ $(document).ready(function(){
 	<div id="cameraDiv" class="container">
 		<input type='file' accept='video/*' capture='camecorder'>
 	</div>
+    
+    <div id="myButton17" class="container">
+        <button id="button17" type="button" class="btn btn-default">checkAppInstalled</button>
+    </div>
 </body>
 </html>
