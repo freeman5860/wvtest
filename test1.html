@@ -222,7 +222,7 @@ $(document).ready(function(){
 	});
     
     $("#button17").click(function () {
-        mqq.app.checkAppInstalled(id, function (ret) {
+        mqq.app.checkAppInstalled('com.tencent.mm', function (ret) {
             console.log(ret); // 5.3.1
         });
     });
