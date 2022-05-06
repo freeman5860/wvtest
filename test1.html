@@ -222,8 +222,18 @@ $(document).ready(function(){
 	});
     
     $("#button17").click(function () {
-        mqq.app.checkAppInstalled('com.tencent.mm', function (ret) {
-            console.log(ret); // 5.3.1
+        mqq.app.downloadApp({
+            "appid": "100686922",
+            "url": "http://view.inews.qq.com/appDownLoad/322?refer=biznew&src=mQQ&ostype=android&uin=",
+            "packageName": "com.tencent.news",
+            "actionCode": "2",
+            "via": "ANDROIDQQ.TXNEWS",
+            //统一下载管控
+            "source": "qzone",
+            "appName": "TencentNews",
+            "isUniteDownload": true,
+        }, function(data){
+            alert(JSON.stringify(data))
         });
     });
                   
@@ -308,7 +318,7 @@ $(document).ready(function(){
 	</div>
     
     <div id="myButton17" class="container">
-        <button id="button17" type="button" class="btn btn-default">checkAppInstalled</button>
+        <button id="button17" type="button" class="btn btn-default">downloadApp</button>
     </div>
 </body>
 </html>
