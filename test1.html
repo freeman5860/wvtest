@@ -236,6 +236,18 @@ $(document).ready(function(){
             alert(JSON.stringify(data))
         });
     });
+    
+    $("#button18").click(function () {
+        mqq.ui.openUrl({
+            "url": "http://www.qq.com",
+            "target": 1,
+            "options": {
+                "useNewConfig":true,
+            }
+        }, function(data){
+            alert(JSON.stringify(data))
+        });
+    });
                   
 });
 
@@ -319,6 +331,10 @@ $(document).ready(function(){
     
     <div id="myButton17" class="container">
         <button id="button17" type="button" class="btn btn-default">downloadApp</button>
+    </div>
+    
+    <div id="myButton18" class="container">
+        <button id="button18" type="button" class="btn btn-default">openUrl</button>
     </div>
 </body>
 </html>
