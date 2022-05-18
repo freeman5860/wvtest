@@ -246,7 +246,16 @@ $(document).ready(function(){
             alert(JSON.stringify(data))
         });
     });
-                  
+        
+    $("#button19").click(function () {
+        mqq.ui.openUrl({
+            "url": "http://www.qq.com",
+            "target": 1,
+            "useNewConfig":true,
+        }, function(data){
+            alert(JSON.stringify(data))
+        });
+    });
 });
 
 //test();
@@ -334,5 +343,11 @@ $(document).ready(function(){
     <div id="myButton18" class="container">
         <button id="button18" type="button" class="btn btn-default">openUrl2</button>
     </div>
+    
+    <div id="myButton19" class="container">
+        <button id="button19" type="button" class="btn btn-default">location</button>
+    </div>
+    
+    <a href='mqqapi://forward/url?src_type=web&version=1&openid=1548600284&appid=101502376&url_prefix=aHR0cHM6Ly9qaWF6aGFuZy5xcS5jb20vaGVhbHRoeS9kaXN0L2ZhY2VSZWNvZ25pdGlvbi9yZWNvZ25pdGlvbi5odG1sP2FwcGlkPTEwMTUwMjM3NiZvcGVuaWQ9MTU0ODYwMDI4NCZfd3d2PTQmaG9wZVRva2VuPTBmOWI0M2RkYjRjMzE0ZTcyZWY5NDE3ZTlhZTY0ZTEzJm1pZGFzU2NoZW1hPSZ0cmFjZV9pZD1IUDE2NTI3NzE3NDVHQVJYQlhERkFQTFZPU1hIUEQmZmFjZVR5cGU9MyZoYXNBdWRpbz0x'>跳转</a>
 </body>
 </html>
